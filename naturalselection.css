@@ -1,0 +1,19 @@
+/* CSS declarations go here */
+.map {
+    position: relative;
+    background-image: url('/ns2_tram.png');
+    background-position: -20px -20px;
+    width: 1024px;
+    height: 1024px;
+}
+
+.map circle {
+    stroke-width: 2px;
+    stroke-dasharray: 9, 5;
+    stroke-opacity: .8;
+    stroke: white;
+}
+
+body {
+	background-color: #000;
+}
