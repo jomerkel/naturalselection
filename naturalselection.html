@@ -8,15 +8,33 @@
 </body>
 
 <template name="page">
-	<center>
-		{{> map}}
-	</center>  
+  <div class="container">
+    <div class="row">
+	<div class="span10">
+		{{> canvas}}
+	</div>
+	<div class="span2">
+	<h2>Select map</h2>
+	{{#each maps}}
+      {{> map}}
+    {{/each}}
+	</div>
+	</div>
+  </div>
+</template>
+
+<template name="canvas">
+  <div class="bg">
+	{{#constant}}
+      <svg width="1024" height="1024">
+	  	  <image></image>
+	  </svg>
+	{{/constant}}
+  </div>
 </template>
 
 <template name="map">
-  <div class="map">
-	{{#constant}}
-      <svg width="1024" height="1024"></svg>
-	{{/constant}}
+  <div class="ns2_map {{selected}}">
+    <span class="map_name">{{name}}</span>
   </div>
 </template>
